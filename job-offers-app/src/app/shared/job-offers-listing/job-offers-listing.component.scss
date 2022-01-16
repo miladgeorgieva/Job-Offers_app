@@ -1,0 +1,96 @@
+.listing {
+  padding: 60px 0 30px 0;
+}
+
+.offer-card {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 8px 4px 30px #00003c21;
+  margin-bottom: 50px;
+  position: relative;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &__likes {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+
+    .count {
+      font-size: 16px;
+      margin-right: 6px;
+      font-family: "IBM PLEX SERIF", serif;
+      font-weight: 800;
+    }
+
+    .icon {
+      position: relative;
+      width: 24px;
+
+      .icon--border, .icon--full {
+        position: absolute;
+      }
+
+      .icon--full {
+        visibility: hidden;
+      }
+
+      &:hover, &.liked {
+        .icon--border {
+          visibility: hidden;
+        }
+
+        .icon--full {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  &:hover {
+    box-shadow: 12px 8px 35px #00003c21;
+    transform: translate(6px, 6px);
+  }
+
+  .offer-card__meta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+
+    .offer-card__meta--category, .offer-card__meta--type {
+      display: flex;
+      align-items: center;
+      color: #9b9b9b;
+      padding-right: 30px;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-family: 'IBM Plex Serif', serif;
+      letter-spacing: 1px;
+
+      .icon {
+        display: flex;
+        align-items: center;
+        margin-right: 5px;
+
+        .mat-icon {
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
