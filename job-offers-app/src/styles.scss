@@ -55,3 +55,36 @@ body {
   text-align: center;
   font-weight: 800;
 }
+
+.button {
+  text-decoration: none;
+  padding: 6px 30px;
+  border-radius: 30px;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.2s background-color ease-in-out, 0.2s color ease-in-out;
+
+  &--primary {
+    background-color: #000;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  &--secondary {
+    background-color: #fff;
+    color: #000;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+
+

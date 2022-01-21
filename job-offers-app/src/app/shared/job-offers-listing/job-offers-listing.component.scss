@@ -1,14 +1,17 @@
 .listing {
   padding: 60px 0 30px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .offer-card {
-  width: 100%;
+  width: 50%;
+  margin: 20px;
   background-color: #fff;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 8px 4px 30px #00003c21;
-  margin-bottom: 50px;
   position: relative;
   display: block;
   color: #000;
@@ -64,7 +67,7 @@
     transform: translate(6px, 6px);
   }
 
-  .offer-card__meta {
+  &__meta {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -91,6 +94,19 @@
           align-items: center;
         }
       }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: flex-end;
+    border-top: 1px solid #cdcdcd;
+    padding-top: 30px;
+
+    .button {
+      margin-right: 10px;
     }
   }
 }

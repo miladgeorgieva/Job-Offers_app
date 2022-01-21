@@ -2,11 +2,11 @@
   <div class="page-content-wrapper">
     <h1 class="page-title">Job listings near you</h1>
 
-    <div class="container-narrow listing">
-      <a class="offer-card">
+    <div class="listing">
+      <a class="offer-card" *ngFor="let offer of jobOffers">
         <div class="offer-card__likes">
           <div class="count">
-            12
+            {{ offer.likesCount }}
           </div>
           <div class="icon">
             <div class="icon--border">
@@ -18,124 +18,25 @@
           </div>
         </div>
         <div class="card-body offer-card__body">
-          <h5 class="card-title offer-card__title">Job offer numero uno</h5>
-          <p class="card-text offer-card__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <h5 class="card-title offer-card__title">{{ offer.title }}</h5>
+          <p class="card-text offer-card__description">{{ offer.description }}</p>
           <div class="offer-card__meta">
             <div class="offer-card__meta--category">
               <div class="icon">
                 <mat-icon>work_outline</mat-icon>
               </div>
-              Administration
+              {{ offer.category }}
             </div>
             <div class="offer-card__meta--type">
               <div class="icon">
                 <mat-icon>schedule</mat-icon>
               </div>
-              Fulltime
+              {{ offer.type }}
             </div>
           </div>
-        </div>
-      </a>
-      <a class="offer-card">
-        <div class="offer-card__likes">
-          <div class="count">
-            1
-          </div>
-          <div class="icon">
-            <div class="icon--border">
-              <mat-icon>favorite_border</mat-icon>
-            </div>
-            <div class="icon--full">
-              <mat-icon>favorite</mat-icon>
-            </div>
-          </div>
-        </div>
-        <div class="card-body offer-card__body">
-          <h5 class="card-title offer-card__title">Job offer numero dos</h5>
-          <p class="card-text offer-card__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <div class="offer-card__meta">
-            <div class="offer-card__meta--category">
-              <div class="icon">
-                <mat-icon>work_outline</mat-icon>
-              </div>
-              Web Developer
-            </div>
-            <div class="offer-card__meta--type">
-              <div class="icon">
-                <mat-icon>schedule</mat-icon>
-              </div>
-              Part time
-            </div>
-          </div>
-        </div>
-      </a>
-      <a class="offer-card">
-        <div class="offer-card__likes">
-          <div class="count">
-            10
-          </div>
-          <div class="icon">
-            <div class="icon--border">
-              <mat-icon>favorite_border</mat-icon>
-            </div>
-            <div class="icon--full">
-              <mat-icon>favorite</mat-icon>
-            </div>
-          </div>
-        </div>
-        <div class="card-body offer-card__body">
-          <h5 class="card-title offer-card__title">Job offer numero tres</h5>
-          <p class="card-text offer-card__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type.</p>
-          <div class="offer-card__meta">
-            <div class="offer-card__meta--category">
-              <div class="icon">
-                <mat-icon>work_outline</mat-icon>
-              </div>
-              Administration
-            </div>
-            <div class="offer-card__meta--type">
-              <div class="icon">
-                <mat-icon>schedule</mat-icon>
-              </div>
-              Fulltime
-            </div>
-          </div>
-        </div>
-      </a>
-      <a class="offer-card">
-        <div class="offer-card__likes">
-          <div class="count">
-            22
-          </div>
-          <div class="icon liked">
-            <div class="icon--border">
-              <mat-icon>favorite_border</mat-icon>
-            </div>
-            <div class="icon--full">
-              <mat-icon>favorite</mat-icon>
-            </div>
-          </div>
-        </div>
-        <div class="card-body offer-card__body">
-          <h5 class="card-title offer-card__title">Job offer numero quatre</h5>
-          <p class="card-text offer-card__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <div class="offer-card__meta">
-            <div class="offer-card__meta--category">
-              <div class="icon">
-                <mat-icon>work_outline</mat-icon>
-              </div>
-              Administration
-            </div>
-            <div class="offer-card__meta--type">
-              <div class="icon">
-                <mat-icon>schedule</mat-icon>
-              </div>
-              Fulltime
-            </div>
+          <div class="offer-card__actions">
+            <a href="#" class="button button--primary">Edit</a>
+            <a href="#" class="button button--secondary">Delete</a>
           </div>
         </div>
       </a>
