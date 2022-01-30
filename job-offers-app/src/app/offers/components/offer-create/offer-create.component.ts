@@ -4,6 +4,7 @@ import {JobOffer} from "../../models/offer.model";
 import {OffersService} from "../../services/offers.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Subject, takeUntil} from "rxjs";
+import {AuthService} from "../../../auth/services/auth.service";
 
 @Component({
   selector: 'app-offer-create',
@@ -18,13 +19,15 @@ export class OfferCreateComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private route: ActivatedRoute,
               private offerService: OffersService,
-              private router: Router) {
+              private router: Router,
+              private authService: AuthService) {
     this.formGroup = this.fb.group({
       title: [''],
       category: [''],
       type: [''],
       description: [''],
-      likesCount: [0]
+      // likesCount: [0],
+      userId: this.authService.getLoggedUserFromLocalStorage()!.id
     });
   };
 
@@ -69,7 +72,8 @@ export class OfferCreateComponent implements OnInit {
       category: [offer?.category || '', [Validators.required]],
       type: [offer?.type || '', [Validators.required]],
       description: [offer?.description || ''],
-      likesCount: [offer?.likesCount || 0]
+      // likesCount: [offer?.likesCount || 0],
+      userId: [this.authService.getLoggedUserFromLocalStorage()!.id]
     })
   }
 }

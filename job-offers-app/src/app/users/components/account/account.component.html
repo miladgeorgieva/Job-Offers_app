@@ -2,7 +2,7 @@
   <div class="page-content-wrapper">
     <h1 class="page-title">My account</h1>
 
-    <form class="form form--narrow my-5 mx-auto form--background-white form--border-radius form--box-shadow">
+    <form [formGroup]="formGroup" class="form form--narrow my-5 mx-auto form--background-white form--border-radius form--box-shadow" (ngSubmit)="onSubmit()">
       <div class="row">
         <div class="col-6">
           <div class="form-group">
@@ -22,18 +22,14 @@
             <input type="password" class="form-control form-group__input" id="password" formControlName="password">
           </div>
         </div>
-        <div class="col-6">
-          <div class="form-group">
-            <label for="repeatPassword" class="form-group__label">Repeat password</label>
-            <input type="password" class="form-control form-group__input" id="repeatPassword" formControlName="repeat_password">
-          </div>
-        </div>
 
-        <input type="hidden" formControlName="likesCount">
         <div class="col-12 d-flex justify-content-between mt-4">
-          <div class="d-flex">
-            <a href="#" class="button button--primary me-3">Archive</a>
-            <button type="submit" class="button button--primary" >Update</button>
+          <div class="d-flex justify-content-between w-100">
+            <button type="button" class="button button--secondary me-3" (click)="onLogout()">Logout</button>
+            <div>
+              <button type="button" class="button button--primary me-3" (click)="onDelete()">Archive</button>
+              <button type="submit" class="button button--primary" [disabled]="formGroup.invalid">Update</button>
+            </div>
           </div>
         </div>
       </div>

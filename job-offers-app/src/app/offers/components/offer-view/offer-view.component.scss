@@ -1,7 +1,6 @@
 .offer {
-  width: 70%;
-  margin-right: 40px;
-  margin-top: 60px;
+  //width: 70%;
+  margin: 60px;
   position: relative;
 
   &__meta {
@@ -34,11 +33,10 @@
 }
 
 .candidacies {
-  width: 30%;
+  //width: 30%;
   display: flex;
   flex-direction: column;
-  margin-left: 40px;
-  margin-top: 60px;
+  margin: 60px;
   background: #fff;
   padding: 30px;
   border-radius: 20px;
@@ -58,6 +56,7 @@
   .candidacy__name {
     font-size: 20px;
     font-weight: 600;
+    max-width: 400px;
   }
 
   &:last-child {

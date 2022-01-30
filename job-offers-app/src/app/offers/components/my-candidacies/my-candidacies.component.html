@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="page-content-wrapper">
+    <h1 class="page-title">Job listings</h1>
+
+    <div class="listing">
+      <ng-container *ngFor="let jobApplication of jobApplications">
+        <app-offer-item class="offer-card"
+                        [offer]="jobApplication.jobOffer"
+                        [isInMyCandidacies]="true"
+                        [applicationStatus]="jobApplication.status"
+        ></app-offer-item>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,7 @@ import {OffersListingComponent} from "./components/offers-listing/offers-listing
 import {OffersComponent} from "./components/offers/offers.component";
 import {AclGuard} from "../guards/acl.guard";
 import {OfferViewComponent} from "./components/offer-view/offer-view.component";
+import {MyCandidaciesComponent} from "./components/my-candidacies/my-candidacies.component";
 
 const routes: Route[] = [
   {
@@ -38,6 +39,10 @@ const routes: Route[] = [
         path: 'listing/view/:id',
         component: OfferViewComponent,
         // canActivate: [AclGuard]
+      },
+      {
+        path: 'my-candidacies',
+        component: MyCandidaciesComponent
       },
       {
         path: '',

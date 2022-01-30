@@ -2,12 +2,17 @@
   <div class="page-content-wrapper">
     <h1 class="page-title">Job listings</h1>
 
-    <div class="d-flex justify-content-center mt-5">
+    <div class="d-flex justify-content-center mt-5" *ngIf="isAdmin">
       <a routerLink="/listing/new" class="button button--primary">Add new listing</a>
     </div>
 
     <div class="listing">
-        <app-offer-item class="offer-card" *ngFor="let offer of offers" [offer]="offer" (deleteClicked)="onDelete(offer.id)"></app-offer-item>
+        <app-offer-item class="offer-card"
+                        *ngFor="let offer of offers"
+                        [offer]="offer"
+                        (deleteClicked)="onDelete(offer.id)"
+                        (likeDislikeClicked)="onLikeDislike(offer)"
+        ></app-offer-item>
     </div>
   </div>
 </div>

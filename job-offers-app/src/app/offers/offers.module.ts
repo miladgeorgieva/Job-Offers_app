@@ -9,6 +9,7 @@ import { OffersComponent } from './components/offers/offers.component';
 import {OffersRoutingModule} from "./offers-routing.module";
 import {AngularMaterialModule} from "../angular-material.module";
 import {OfferViewComponent} from "./components/offer-view/offer-view.component";
+import { MyCandidaciesComponent } from './components/my-candidacies/my-candidacies.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import {OfferViewComponent} from "./components/offer-view/offer-view.component";
     OfferItemComponent,
     OfferCreateComponent,
     OfferViewComponent,
-    OffersComponent
+    OffersComponent,
+    MyCandidaciesComponent
   ]
 })
 

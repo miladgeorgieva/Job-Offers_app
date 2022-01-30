@@ -1,8 +1,8 @@
- <div class="offer-card__likes">
+ <div class="offer-card__likes" *ngIf="!isInMyCandidacies">
     <div class="count">
-      {{ offer.likesCount }}
+      {{ offer.jobLikes.length }}
     </div>
-    <div class="icon">
+    <div class="icon" [ngClass]="{'liked': isOfferLiked()}" (click)="onLikeDislike()">
       <div class="icon--border">
         <mat-icon>favorite_border</mat-icon>
       </div>
@@ -30,8 +30,9 @@
     </div>
     <div class="offer-card__actions">
       <div class="d-flex">
-        <a href="#" class="button button--primary" [routerLink]="['/listing', 'edit', offer.id]">Edit</a>
-        <button class="button button--primary" (click)="onDelete()">Delete</button>
+        <a href="#" class="button button--primary" [routerLink]="['/listing', 'edit', offer.id]" *ngIf="isAdmin && offer.userId === currentUser.id">Edit</a>
+        <button class="button button--primary" (click)="onDelete()" *ngIf="isAdmin && offer.userId === currentUser.id">Delete</button>
+        <div *ngIf="isInMyCandidacies">Status: {{ applicationStatus }}</div>
       </div>
       <a href="#" class="button button--secondary" [routerLink]="['/listing', 'view', offer.id]">View offer</a>
     </div>
