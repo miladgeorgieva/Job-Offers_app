@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="page-content-wrapper">
+    <h1 class="page-title">My account</h1>
+
+    <form class="form form--narrow my-5 mx-auto form--background-white form--border-radius form--box-shadow">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label for="username" class="form-group__label">Username</label>
+            <input type="text" class="form-control form-group__input" id="username" formControlName="username">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <label for="email" class="form-group__label">Email</label>
+            <input type="email" class="form-control form-group__input" id="email" formControlName="email">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <label for="password" class="form-group__label">Password</label>
+            <input type="password" class="form-control form-group__input" id="password" formControlName="password">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <label for="repeatPassword" class="form-group__label">Repeat password</label>
+            <input type="password" class="form-control form-group__input" id="repeatPassword" formControlName="repeat_password">
+          </div>
+        </div>
+
+        <input type="hidden" formControlName="likesCount">
+        <div class="col-12 d-flex justify-content-between mt-4">
+          <div class="d-flex">
+            <a href="#" class="button button--primary me-3">Archive</a>
+            <button type="submit" class="button button--primary" >Update</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

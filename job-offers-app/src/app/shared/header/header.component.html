@@ -18,14 +18,7 @@
       <div>
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Account
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">My account</a></li>
-              <li><a class="dropdown-item" href="#">Logout</a></li>
-              <li><a class="dropdown-item" href="#">Login</a></li>
-            </ul>
+            <a class="nav-link" routerLink="users/account">{{ hasUser ? "Account" : "Login"}}</a>
           </li>
         </ul>
       </div>

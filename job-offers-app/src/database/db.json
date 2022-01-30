@@ -1,0 +1,28 @@
+{
+  "job-offers": [
+    {
+      "id": 2,
+      "title": "Named Account Support Engineer (NASE)",
+      "category": "IT",
+      "type": "Remote",
+      "description": "Are you ready to work with technologies that are changing the future?\nAre you excited to grab the opportunity to do more in your job and to gain amazing skills and knowledge in enterprise software support?\nAre you looking for the right place where you will work with the most exciting technologies and grow in your career while providing excellent support?\nIf this aligns with your career plan, sounds like “your kind of company”, and you feel passionate about supporting software products join us and expand your talent.\n\nJoin us at Tek Experts. We are a leading global provider of technical support and consulting services on behalf of the world’s largest IT companies.\n\nWith 5,000 employees across six global offices, we have built a reputation for deep technical expertise and providing exceptional customer experiences. We operate a 24/7/365 service across borders, languages, and time zones.\n\nWhat you`ll be doing:\nBe the customer’s primary point of contact for product-related issues and build and maintain a relationship with the customer\nThe assigned engineer will learn the customer’s specific environment\nThe assigned engineer will own the problem until resolution\nEnable seamless collaboration with proper case documentation and ensure timely elevations to drive fast resolution\nAbility to address support incidents more efficiently and effectively\nProviding excellent troubleshooting skills while managing the customer during an extremely Critical time and providing deep technical expertise on a given product family\nCreate knowledge from cases where it makes sense and is helpful for teams and customers\nQualifications\nMinimum 2 years of experience in IT business environment\nGood understanding of networking concept and data traffic; networks protocols; routers and switches\nKnowledge in how web applications work (HTTP, HTML, CSS);\nExperience with Windows Server (2008, 2012 & 2016)\nCustomer orientated, motivated to take charge of both customer engagement and problem\nExcellent customer service skills\nExcellent written and oral knowledge of English. A second European language will be considered as an advantage.\nLogical thinking and having a common sense in a daily business routine\nStrong Team Player who is also self-driven and needs no close supervision from his manager\nAbility to work in a dynamic environment, often with tight deadlines and\nAnalytical skills combined with excellent customer focus and soft skills\nProblem-solving skills\nStrong troubleshooting skills\nStrong leadership skills and decision making\nPrioritization skills\nAttention to details\nA highly motivated person with a positive attitude, being an influencer and a self-learner who wants to constantly develop new and current skills, and embraces changes\nWhat we offer you\nTo say people are our greatest asset has become something of a cliché but at Tek Experts, we strongly believe it’s true.\n\n2 Pozitano Square, Floor 2 - Perform Business Center, 1000 Sofia",
+      "likesCount": 0
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@admin.com",
+      "password": "admin",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "email": "user@user.com",
+      "password": "user",
+      "role": "user"
+    }
+  ]
+}

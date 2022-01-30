@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="page-content-wrapper">
+    <h1 class="page-title">{{ formGroup?.get('id')?.value ? 'Edit offer' : 'Create a listing' }}</h1>
+
+    <form [formGroup]="formGroup" class="form form--narrow my-5 mx-auto form--background-white form--border-radius form--box-shadow" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="offerTitle" class="form-group__label">Title</label>
+            <input type="text" class="form-control form-group__input" id="offerTitle" formControlName="title">
+            <div class="form-group__input-error-msg"
+              *ngIf="formGroup.get('title')?.touched && formGroup.get('title')?.hasError('required')">
+              This field is required!
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <label for="offerCategory" class="form-group__label">Category</label>
+            <input type="text" class="form-control form-group__input" id="offerCategory" formControlName="category">
+            <div class="form-group__input-error-msg"
+                 *ngIf="formGroup.get('category')?.touched && formGroup.get('category')?.hasError('required')">
+              This field is required!
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <label for="offerType" class="form-group__label">Type</label>
+            <input type="text" class="form-control form-group__input" id="offerType" formControlName="type">
+            <div class="form-group__input-error-msg"
+                 *ngIf="formGroup.get('type')?.touched && formGroup.get('type')?.hasError('required')">
+              This field is required!
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-group">
+            <label for="offerDescription" class="form-group__label">Description</label>
+            <textarea class="form-control form-group__input" id="offerDescription" cols="30" rows="10" formControlName="description"></textarea>
+          </div>
+        </div>
+        <input type="hidden" formControlName="likesCount">
+        <div class="col-12 d-flex justify-content-between mt-4">
+          <a routerLink="/listing" class="button button--secondary me-3">Back to listing</a>
+          <div class="d-flex">
+            <a href="#" class="button button--primary me-3">Archive</a>
+            <button type="submit" class="button button--primary" [disabled]="formGroup.invalid">{{ formGroup?.get('id')?.value ? "Save" : "Create" }}</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

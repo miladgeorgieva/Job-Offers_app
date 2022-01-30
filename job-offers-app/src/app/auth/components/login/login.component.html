@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="page-content-wrapper">
+    <h1 class="page-title">Login</h1>
+
+    <form class="form form--narrow my-5 mx-auto form--background-white form--border-radius form--box-shadow" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label for="email" class="form-group__label">Email</label>
+            <input type="email" class="form-control form-group__input" id="email" formControlName="email" required>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <label for="password" class="form-group__label">Password</label>
+            <input type="password" class="form-control form-group__input" id="password" formControlName="password" required>
+          </div>
+        </div>
+        <div class="col-12 d-flex justify-content-end mt-4">
+          <button type="submit" class="button button--primary">Login</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
